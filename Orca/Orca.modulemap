@@ -1,0 +1,34 @@
+framework module Orca {
+    umbrella header "Orca.h"
+
+    export *
+    module * { export * }
+}
+
+framework module Orca_Private {
+    module Base {
+        header "base.h"
+        export *
+    }
+
+    module Field {
+        umbrella header "field.h"
+        header "gbuffer.h"
+        export *
+    }
+
+    module GlyphBuffer {
+        header "gbuffer.h"
+        export *
+    }
+
+    module Events {
+        header "vmio.h"
+        export *
+    }
+
+    module Simulation {
+        header "sim.h"
+        export *
+    }
+}

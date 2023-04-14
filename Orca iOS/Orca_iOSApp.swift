@@ -7,6 +7,8 @@
 
 import CoreMIDI
 import SwiftUI
+import OrcaUI
+import Orca
 
 @main
 class Orca_iOSApp: App {
@@ -16,7 +18,8 @@ class Orca_iOSApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(hostModel: hostModel)
+//            ContentView(hostModel: hostModel)
+            OrcaUIView(simulation: OrcaSimulation(height: 40, width: 40))
         }
     }
 }
