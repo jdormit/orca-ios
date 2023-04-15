@@ -38,7 +38,16 @@ class OrcaField {
         return OrcaField.glyphToCharacter(buffer[row * width + col])
     }
 
+    func setGlyph(glyph: Character, row: Int, col: Int) {
+        precondition(row < height && col < width, "Invalid coordinate: (\(col), \(row)")
+        gbuffer_poke(buffer, height, width, row, col, OrcaField.characterToGlyph(glyph))
+    }
+
     private static func glyphToCharacter(_ glyph: Int8) -> Character {
         Character(UnicodeScalar(UInt8(glyph)))
+    }
+
+    private static func characterToGlyph(_ char: Character) -> Int8 {
+        Int8(char.asciiValue!)
     }
 }

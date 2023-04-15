@@ -33,6 +33,10 @@ public class OrcaSimulation {
         field.getGlyph(row: row, col: col)
     }
 
+    public func setGlyph(glyph: Character, row: Int, col: Int) {
+        field.setGlyph(glyph: glyph, row: row, col: col)
+    }
+
     public func simulateFrame() {
         markBuffer.clear(height: field.height, width: field.width)
         eventList.clear()
