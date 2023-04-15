@@ -63,7 +63,6 @@ public struct OrcaUIView: View {
                 .autocapitalization(.none)
                 .opacity(0)
                 .focused($hiddenInputFocused)
-
         }
     }
 }
