@@ -8,7 +8,7 @@
 import Foundation
 import Orca_Private.Simulation
 
-public class OrcaSimulation {
+public class OrcaSimulation: ObservableObject {
     var field: OrcaField
     var markBuffer: OrcaMarkBuffer
     var eventList: OrcaEventList
@@ -35,6 +35,7 @@ public class OrcaSimulation {
 
     public func setGlyph(glyph: Character, row: Int, col: Int) {
         field.setGlyph(glyph: glyph, row: row, col: col)
+        self.objectWillChange.send()
     }
 
     public func simulateFrame() {
@@ -42,6 +43,7 @@ public class OrcaSimulation {
         eventList.clear()
         orca_run(field.buffer, markBuffer.buffer, field.height, field.width, tickNumber, eventList.pointer, randomSeed)
         tickNumber += 1
+        self.objectWillChange.send()
     }
 }
 

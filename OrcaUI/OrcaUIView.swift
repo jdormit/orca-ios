@@ -11,9 +11,8 @@ import Orca
 typealias Coordinate = (Int, Int)
 
 public struct OrcaUIView: View {
-    @State var simulation: OrcaSimulation
+    @ObservedObject var simulation: OrcaSimulation
     @State var currentPosition: Coordinate = (0, 0)
-    @State var hiddenTextInput: String = ""
     @FocusState var hiddenInputFocused: Bool
 
     public init(simulation: OrcaSimulation) {
@@ -21,13 +20,10 @@ public struct OrcaUIView: View {
     }
     
     public var body: some View {
-        let textBinding: Binding<String> = Binding(get: {
-            hiddenTextInput
-        }, set: { input in
+        let textBinding: Binding<String> = Binding(get: {""}, set: { input in
             if !input.isEmpty {
                 let lastChar = input[input.index(before: input.endIndex)]
                 simulation.setGlyph(glyph: lastChar, row: currentPosition.1, col: currentPosition.0)
-                hiddenTextInput = String(lastChar)
             }
         })
         VStack() {
