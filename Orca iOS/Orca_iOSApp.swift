@@ -19,7 +19,7 @@ class Orca_iOSApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView(hostModel: hostModel)
-            OrcaUIView(simulation: OrcaSimulation(height: 40, width: 40))
+            OrcaUIView(simulation: OrcaSimulation(height: 100, width: 100))
         }
     }
 }
