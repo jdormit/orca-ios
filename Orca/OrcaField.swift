@@ -10,7 +10,7 @@ import Foundation
 import Orca_Private.Field
 
 class OrcaField {
-    private var field: Field
+    var field: Field
 
     var height: Int {
         Int(field.height)
@@ -21,7 +21,7 @@ class OrcaField {
     }
 
     var buffer: UnsafeMutablePointer<Glyph> {
-        field.buffer
+        field.buffer!
     }
 
     init(height: Int, width: Int, fillGlyph: Int8) {

@@ -14,9 +14,13 @@ public struct OrcaUIView: View {
     @ObservedObject var simulation: OrcaSimulation
     @State var currentPosition: Coordinate
     @FocusState var hiddenInputFocused: Bool
+    let font = UIFont.monospacedSystemFont(ofSize: 17, weight: .regular)
+    let fontSize: CGFloat
 
     public init(simulation: OrcaSimulation) {
         self.simulation = simulation
+        let attrStr = NSAttributedString(string: "@", attributes: [NSAttributedString.Key.font: font])
+        fontSize = attrStr.size().width
         currentPosition = (simulation.width / 2, simulation.height / 2)
         UIScrollView.appearance().bounces = false
     }
@@ -36,25 +40,25 @@ public struct OrcaUIView: View {
                 .opacity(0)
                 .focused($hiddenInputFocused)
             ScrollView([.horizontal, .vertical], showsIndicators: false) {
-                VStack() {
-                    ForEach(0..<simulation.height, id: \.self) { row in
-                        HStack() {
-                            ForEach(0..<simulation.width, id: \.self) { col in
-                                let isCurrentPos = (col, row) == currentPosition
-                                let glyph = simulation.getGlyph(row: row, col: col)
-                                let text = glyph == "." && isCurrentPos ? "@" : String(glyph)
-                                Text(text)
-                                    .background(isCurrentPos ? .yellow : .white)
-                                    .monospaced()
-                                    .onTapGesture {
-                                        currentPosition = (col, row)
-                                    }
+                let cols: [GridItem] = (0..<simulation.width).map { _ in GridItem(.fixed(fontSize)) }
+                LazyVGrid(columns: cols) {
+                    ForEach(0..<(simulation.height * simulation.width), id: \.self) { rawIdx in
+                        let col = rawIdx % simulation.width
+                        let row = rawIdx / simulation.width
+                        let isCurrentPos = (col, row) == currentPosition
+                        let glyph = simulation.getGlyph(row: row, col: col)
+                        let text = glyph == "." && isCurrentPos ? "@" : String(glyph)
+                        Text(text)
+                            .font(Font(font))
+                            .background(isCurrentPos ? .yellow : .white)
+                            .monospaced()
+                            .onTapGesture {
+                                currentPosition = (col, row)
                             }
-                        }
                     }
                 }
+                .padding()
             }
-            .padding()
             .ignoresSafeArea(.keyboard)
             VStack() {
                 Spacer()
@@ -68,6 +72,7 @@ public struct OrcaUIView: View {
                     .padding(30)
                 }
             }
+
         }
     }
 }

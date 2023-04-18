@@ -35,7 +35,7 @@ public class OrcaSimulation: ObservableObject {
 
     public func setGlyph(glyph: Character, row: Int, col: Int) {
         field.setGlyph(glyph: glyph, row: row, col: col)
-        self.objectWillChange.send()
+        self.publishChangeToMainThread()
     }
 
     public func simulateFrame() {
@@ -43,7 +43,13 @@ public class OrcaSimulation: ObservableObject {
         eventList.clear()
         orca_run(field.buffer, markBuffer.buffer, field.height, field.width, tickNumber, eventList.pointer, randomSeed)
         tickNumber += 1
-        self.objectWillChange.send()
+        self.publishChangeToMainThread()
+    }
+
+    private func publishChangeToMainThread() {
+        DispatchQueue.main.async {
+            self.objectWillChange.send()
+        }
     }
 }
 

@@ -10,10 +10,10 @@ import Foundation
 import Orca_Private.GlyphBuffer
 
 class OrcaMarkBuffer {
-    private var mBuf: Mbuf_reusable
+    var mBuf: Mbuf_reusable
 
     var buffer: UnsafeMutablePointer<Mark> {
-        mBuf.buffer
+        mBuf.buffer!
     }
 
     init(height: Int, width: Int) {
@@ -31,6 +31,6 @@ class OrcaMarkBuffer {
     }
 
     func clear(height: Int, width: Int) {
-        mbuffer_clear(&mBuf, height, width)
+        mbuffer_clear(mBuf.buffer, height, width)
     }
 }

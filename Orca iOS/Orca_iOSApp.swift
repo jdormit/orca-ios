@@ -13,13 +13,22 @@ import Orca
 @main
 class Orca_iOSApp: App {
     @ObservedObject private var hostModel = AudioUnitHostModel()
+    let timer: RepeatingTimer
+    let simulation: OrcaSimulation
 
-    required init() {}
+    required init() {
+        var bpm = 120.0
+        let sim = OrcaSimulation(height: 60, width: 80)
+        self.simulation = sim
+        timer = RepeatingTimer(ticksPerMinute: bpm * 4) {
+            sim.simulateFrame()
+        }
+    }
 
     var body: some Scene {
         WindowGroup {
 //            ContentView(hostModel: hostModel)
-            OrcaUIView(simulation: OrcaSimulation(height: 100, width: 100))
+            OrcaUIView(simulation: simulation)
         }
     }
 }
