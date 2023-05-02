@@ -1,0 +1,1463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23AF0FDB29E459DA006DA7C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF0FDA29E459DA006DA7C7 /* ContentView.swift */; };
+		23AF0FDF29E459DA006DA7C7 /* ViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF0FDE29E459DA006DA7C7 /* ViewControllerRepresentable.swift */; };
+		23AF0FE229E459DA006DA7C7 /* Synth.aif in Resources */ = {isa = PBXBuildFile; fileRef = 23AF0FE129E459DA006DA7C7 /* Synth.aif */; };
+		23AF0FE429E459DA006DA7C7 /* SimplePlayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF0FE329E459DA006DA7C7 /* SimplePlayEngine.swift */; };
+		23AF0FE629E459DA006DA7C7 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF0FE529E459DA006DA7C7 /* TypeAliases.swift */; };
+		23AF0FE929E459DA006DA7C7 /* StringHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF0FE829E459DA006DA7C7 /* StringHelpers.swift */; };
+		23AF0FEC29E459DA006DA7C7 /* MIDIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF0FEB29E459DA006DA7C7 /* MIDIManager.swift */; };
+		23AF0FEF29E459DA006DA7C7 /* AudioUnitHostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF0FEE29E459DA006DA7C7 /* AudioUnitHostModel.swift */; };
+		23AF0FF129E459DA006DA7C7 /* AudioUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF0FF029E459DA006DA7C7 /* AudioUnitViewModel.swift */; };
+		23AF0FF329E459DA006DA7C7 /* Orca_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF0FF229E459DA006DA7C7 /* Orca_iOSApp.swift */; };
+		23AF0FF529E459DD006DA7C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23AF0FF429E459DD006DA7C7 /* Assets.xcassets */; };
+		23AF0FF829E459DD006DA7C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23AF0FF729E459DD006DA7C7 /* Preview Assets.xcassets */; };
+		23AF100329E459DF006DA7C7 /* Orca_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF100229E459DF006DA7C7 /* Orca_iOSTests.swift */; };
+		23AF100D29E459DF006DA7C7 /* Orca_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF100C29E459DF006DA7C7 /* Orca_iOSUITests.swift */; };
+		23AF100F29E459DF006DA7C7 /* Orca_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF100E29E459DF006DA7C7 /* Orca_iOSUITestsLaunchTests.swift */; };
+		23AF101529E459DF006DA7C7 /* Orca iOSExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 23AF101429E459DF006DA7C7 /* Orca iOSExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		23AF101A29E459DF006DA7C7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 23AF101929E459DF006DA7C7 /* README.md */; };
+		23AF101F29E459DF006DA7C7 /* ParameterSpecBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF101E29E459DF006DA7C7 /* ParameterSpecBase.swift */; };
+		23AF102229E459DF006DA7C7 /* CrossPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF102129E459DF006DA7C7 /* CrossPlatform.swift */; };
+		23AF102429E459DF006DA7C7 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF102329E459DF006DA7C7 /* String+Utils.swift */; };
+		23AF102829E459DF006DA7C7 /* Orca_iOSExtensionAudioUnit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23AF102729E459DF006DA7C7 /* Orca_iOSExtensionAudioUnit.mm */; };
+		23AF102B29E459DF006DA7C7 /* Orca_iOSExtensionAUProcessHelper.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 23AF102A29E459DF006DA7C7 /* Orca_iOSExtensionAUProcessHelper.hpp */; };
+		23AF102F29E459DF006DA7C7 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF102E29E459DF006DA7C7 /* Parameters.swift */; };
+		23AF103229E459DF006DA7C7 /* Orca_iOSExtensionDSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 23AF103129E459DF006DA7C7 /* Orca_iOSExtensionDSPKernel.hpp */; };
+		23AF103529E459DF006DA7C7 /* Orca_iOSExtensionMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF103429E459DF006DA7C7 /* Orca_iOSExtensionMainView.swift */; };
+		23AF103729E459DF006DA7C7 /* MomentaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF103629E459DF006DA7C7 /* MomentaryButton.swift */; };
+		23AF103929E459DF006DA7C7 /* ParameterSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF103829E459DF006DA7C7 /* ParameterSlider.swift */; };
+		23AF103E29E459DF006DA7C7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23AF103C29E459DF006DA7C7 /* MainInterface.storyboard */; };
+		23AF104029E459DF006DA7C7 /* ObservableAUParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF103F29E459DF006DA7C7 /* ObservableAUParameter.swift */; };
+		23AF104229E459DF006DA7C7 /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF104129E459DF006DA7C7 /* AudioUnitViewController.swift */; };
+		23D5C27229E980360059A05E /* OrcaUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D5C27129E980360059A05E /* OrcaUIView.swift */; };
+		23D5C27829E982380059A05E /* libOrcaUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D5C26F29E980360059A05E /* libOrcaUI.a */; };
+		23D5C27A29E982400059A05E /* libOrcaUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D5C26F29E980360059A05E /* libOrcaUI.a */; };
+		23D5C29229E98FFA0059A05E /* Orca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D5C28A29E98FFA0059A05E /* Orca.framework */; };
+		23D5C29929E98FFA0059A05E /* OrcaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D5C29829E98FFA0059A05E /* OrcaTests.swift */; };
+		23D5C29A29E98FFA0059A05E /* Orca.h in Headers */ = {isa = PBXBuildFile; fileRef = 23D5C28C29E98FFA0059A05E /* Orca.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23D5C29D29E98FFA0059A05E /* Orca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D5C28A29E98FFA0059A05E /* Orca.framework */; };
+		23D5C29E29E98FFA0059A05E /* Orca.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23D5C28A29E98FFA0059A05E /* Orca.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		23D5C2A629E990100059A05E /* OrcaField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B362929E5A4FA0051FCC3 /* OrcaField.swift */; };
+		23D5C2A729E990100059A05E /* sim.c in Sources */ = {isa = PBXBuildFile; fileRef = 239641AE29E4EB9D00AFFF0D /* sim.c */; };
+		23D5C2A829E990100059A05E /* gbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 239641BD29E4EB9D00AFFF0D /* gbuffer.c */; };
+		23D5C2A929E990100059A05E /* OrcaMarkBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B362B29E5A5D60051FCC3 /* OrcaMarkBuffer.swift */; };
+		23D5C2AA29E990100059A05E /* OrcaSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B362629E59EDA0051FCC3 /* OrcaSimulation.swift */; };
+		23D5C2AB29E990100059A05E /* vmio.c in Sources */ = {isa = PBXBuildFile; fileRef = 239641C329E4EB9E00AFFF0D /* vmio.c */; };
+		23D5C2AC29E990100059A05E /* OrcaEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235B362D29E5B4D70051FCC3 /* OrcaEvent.swift */; };
+		23D5C2AD29E990100059A05E /* cli_main.c in Sources */ = {isa = PBXBuildFile; fileRef = 239641C029E4EB9D00AFFF0D /* cli_main.c */; };
+		23D5C2AF29E9908D0059A05E /* Orca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D5C28A29E98FFA0059A05E /* Orca.framework */; };
+		23D5C2B029E990950059A05E /* Orca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D5C28A29E98FFA0059A05E /* Orca.framework */; };
+		23D5C2B129E992C30059A05E /* field.h in Headers */ = {isa = PBXBuildFile; fileRef = 239641AC29E4EB9D00AFFF0D /* field.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		23D5C2B229E992C90059A05E /* gbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 239641BE29E4EB9D00AFFF0D /* gbuffer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		23D5C2B329E992CE0059A05E /* sim.h in Headers */ = {isa = PBXBuildFile; fileRef = 239641B129E4EB9D00AFFF0D /* sim.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		23D5C2B429E992D30059A05E /* vmio.h in Headers */ = {isa = PBXBuildFile; fileRef = 239641BC29E4EB9D00AFFF0D /* vmio.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		23D5C2B529E992DD0059A05E /* base.h in Headers */ = {isa = PBXBuildFile; fileRef = 239641AD29E4EB9D00AFFF0D /* base.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		23D5C2B629E9944A0059A05E /* field.c in Sources */ = {isa = PBXBuildFile; fileRef = 239641C129E4EB9D00AFFF0D /* field.c */; };
+		23D5E76F29EC312600DFB0FE /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D5E76E29EC312600DFB0FE /* Timer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23AF0FFF29E459DF006DA7C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23AF0FCF29E459DA006DA7C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23AF0FD629E459DA006DA7C7;
+			remoteInfo = "Orca iOS";
+		};
+		23AF100929E459DF006DA7C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23AF0FCF29E459DA006DA7C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23AF0FD629E459DA006DA7C7;
+			remoteInfo = "Orca iOS";
+		};
+		23AF101629E459DF006DA7C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23AF0FCF29E459DA006DA7C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23AF101329E459DF006DA7C7;
+			remoteInfo = "Orca iOSExtension";
+		};
+		23D5C29329E98FFA0059A05E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23AF0FCF29E459DA006DA7C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23D5C28929E98FFA0059A05E;
+			remoteInfo = Orca;
+		};
+		23D5C29529E98FFA0059A05E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23AF0FCF29E459DA006DA7C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23AF0FD629E459DA006DA7C7;
+			remoteInfo = "Orca iOS";
+		};
+		23D5C29B29E98FFA0059A05E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23AF0FCF29E459DA006DA7C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23D5C28929E98FFA0059A05E;
+			remoteInfo = Orca;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		23AF104929E459DF006DA7C7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				23AF101529E459DF006DA7C7 /* Orca iOSExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D5C26D29E980360059A05E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D5C2A229E98FFA0059A05E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				23D5C29E29E98FFA0059A05E /* Orca.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		235B362329E59E610051FCC3 /* Orca.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = Orca.modulemap; sourceTree = "<group>"; };
+		235B362629E59EDA0051FCC3 /* OrcaSimulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcaSimulation.swift; sourceTree = "<group>"; };
+		235B362929E5A4FA0051FCC3 /* OrcaField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcaField.swift; sourceTree = "<group>"; };
+		235B362B29E5A5D60051FCC3 /* OrcaMarkBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcaMarkBuffer.swift; sourceTree = "<group>"; };
+		235B362D29E5B4D70051FCC3 /* OrcaEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcaEvent.swift; sourceTree = "<group>"; };
+		239641AC29E4EB9D00AFFF0D /* field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = field.h; sourceTree = "<group>"; };
+		239641AD29E4EB9D00AFFF0D /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
+		239641AE29E4EB9D00AFFF0D /* sim.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sim.c; sourceTree = "<group>"; };
+		239641B129E4EB9D00AFFF0D /* sim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sim.h; sourceTree = "<group>"; };
+		239641B229E4EB9D00AFFF0D /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		239641B329E4EB9D00AFFF0D /* examples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = examples; sourceTree = "<group>"; };
+		239641B429E4EB9D00AFFF0D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		239641B629E4EB9D00AFFF0D /* etc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = etc; sourceTree = "<group>"; };
+		239641BC29E4EB9D00AFFF0D /* vmio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vmio.h; sourceTree = "<group>"; };
+		239641BD29E4EB9D00AFFF0D /* gbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gbuffer.c; sourceTree = "<group>"; };
+		239641BE29E4EB9D00AFFF0D /* gbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gbuffer.h; sourceTree = "<group>"; };
+		239641C029E4EB9D00AFFF0D /* cli_main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cli_main.c; sourceTree = "<group>"; };
+		239641C129E4EB9D00AFFF0D /* field.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = field.c; sourceTree = "<group>"; };
+		239641C229E4EB9E00AFFF0D /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = "<group>"; };
+		239641C329E4EB9E00AFFF0D /* vmio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vmio.c; sourceTree = "<group>"; };
+		23AF0FD729E459DA006DA7C7 /* Orca iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Orca iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23AF0FDA29E459DA006DA7C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		23AF0FDE29E459DA006DA7C7 /* ViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		23AF0FE129E459DA006DA7C7 /* Synth.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Synth.aif; sourceTree = "<group>"; };
+		23AF0FE329E459DA006DA7C7 /* SimplePlayEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayEngine.swift; sourceTree = "<group>"; };
+		23AF0FE529E459DA006DA7C7 /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
+		23AF0FE829E459DA006DA7C7 /* StringHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelpers.swift; sourceTree = "<group>"; };
+		23AF0FEB29E459DA006DA7C7 /* MIDIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIManager.swift; sourceTree = "<group>"; };
+		23AF0FEE29E459DA006DA7C7 /* AudioUnitHostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitHostModel.swift; sourceTree = "<group>"; };
+		23AF0FF029E459DA006DA7C7 /* AudioUnitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewModel.swift; sourceTree = "<group>"; };
+		23AF0FF229E459DA006DA7C7 /* Orca_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orca_iOSApp.swift; sourceTree = "<group>"; };
+		23AF0FF429E459DD006DA7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23AF0FF729E459DD006DA7C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		23AF0FF929E459DD006DA7C7 /* Orca_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Orca_iOS.entitlements; sourceTree = "<group>"; };
+		23AF0FFE29E459DF006DA7C7 /* Orca iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Orca iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23AF100229E459DF006DA7C7 /* Orca_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orca_iOSTests.swift; sourceTree = "<group>"; };
+		23AF100829E459DF006DA7C7 /* Orca iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Orca iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23AF100C29E459DF006DA7C7 /* Orca_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orca_iOSUITests.swift; sourceTree = "<group>"; };
+		23AF100E29E459DF006DA7C7 /* Orca_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orca_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		23AF101429E459DF006DA7C7 /* Orca iOSExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Orca iOSExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23AF101929E459DF006DA7C7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		23AF101C29E459DF006DA7C7 /* Orca_iOSExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Orca_iOSExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		23AF101E29E459DF006DA7C7 /* ParameterSpecBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterSpecBase.swift; sourceTree = "<group>"; };
+		23AF102129E459DF006DA7C7 /* CrossPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossPlatform.swift; sourceTree = "<group>"; };
+		23AF102329E459DF006DA7C7 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		23AF102629E459DF006DA7C7 /* Orca_iOSExtensionAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Orca_iOSExtensionAudioUnit.h; sourceTree = "<group>"; };
+		23AF102729E459DF006DA7C7 /* Orca_iOSExtensionAudioUnit.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Orca_iOSExtensionAudioUnit.mm; sourceTree = "<group>"; };
+		23AF102A29E459DF006DA7C7 /* Orca_iOSExtensionAUProcessHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Orca_iOSExtensionAUProcessHelper.hpp; sourceTree = "<group>"; };
+		23AF102D29E459DF006DA7C7 /* Orca_iOSExtensionParameterAddresses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Orca_iOSExtensionParameterAddresses.h; sourceTree = "<group>"; };
+		23AF102E29E459DF006DA7C7 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		23AF103129E459DF006DA7C7 /* Orca_iOSExtensionDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Orca_iOSExtensionDSPKernel.hpp; sourceTree = "<group>"; };
+		23AF103429E459DF006DA7C7 /* Orca_iOSExtensionMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orca_iOSExtensionMainView.swift; sourceTree = "<group>"; };
+		23AF103629E459DF006DA7C7 /* MomentaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentaryButton.swift; sourceTree = "<group>"; };
+		23AF103829E459DF006DA7C7 /* ParameterSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterSlider.swift; sourceTree = "<group>"; };
+		23AF103D29E459DF006DA7C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		23AF103F29E459DF006DA7C7 /* ObservableAUParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableAUParameter.swift; sourceTree = "<group>"; };
+		23AF104129E459DF006DA7C7 /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
+		23AF104329E459DF006DA7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D5C26F29E980360059A05E /* libOrcaUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOrcaUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D5C27129E980360059A05E /* OrcaUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcaUIView.swift; sourceTree = "<group>"; };
+		23D5C28A29E98FFA0059A05E /* Orca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Orca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D5C28C29E98FFA0059A05E /* Orca.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Orca.h; sourceTree = "<group>"; };
+		23D5C29129E98FFA0059A05E /* OrcaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrcaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D5C29829E98FFA0059A05E /* OrcaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcaTests.swift; sourceTree = "<group>"; };
+		23D5E76E29EC312600DFB0FE /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23AF0FD429E459DA006DA7C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D5C29D29E98FFA0059A05E /* Orca.framework in Frameworks */,
+				23D5C27829E982380059A05E /* libOrcaUI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23AF0FFB29E459DF006DA7C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23AF100529E459DF006DA7C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23AF101129E459DF006DA7C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D5C2B029E990950059A05E /* Orca.framework in Frameworks */,
+				23D5C27A29E982400059A05E /* libOrcaUI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D5C26C29E980360059A05E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D5C2AF29E9908D0059A05E /* Orca.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D5C28729E98FFA0059A05E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D5C28E29E98FFA0059A05E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D5C29229E98FFA0059A05E /* Orca.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		237AC73529E4E9D400DED7AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23AF0FCE29E459DA006DA7C7 = {
+			isa = PBXGroup;
+			children = (
+				23AF0FD929E459DA006DA7C7 /* Orca iOS */,
+				23AF100129E459DF006DA7C7 /* Orca iOSTests */,
+				23AF100B29E459DF006DA7C7 /* Orca iOSUITests */,
+				23AF101829E459DF006DA7C7 /* Orca iOSExtension */,
+				23D5C27029E980360059A05E /* OrcaUI */,
+				23D5C28B29E98FFA0059A05E /* Orca */,
+				23D5C29729E98FFA0059A05E /* OrcaTests */,
+				23AF0FD829E459DA006DA7C7 /* Products */,
+				237AC73529E4E9D400DED7AF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		23AF0FD829E459DA006DA7C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23AF0FD729E459DA006DA7C7 /* Orca iOS.app */,
+				23AF0FFE29E459DF006DA7C7 /* Orca iOSTests.xctest */,
+				23AF100829E459DF006DA7C7 /* Orca iOSUITests.xctest */,
+				23AF101429E459DF006DA7C7 /* Orca iOSExtension.appex */,
+				23D5C26F29E980360059A05E /* libOrcaUI.a */,
+				23D5C28A29E98FFA0059A05E /* Orca.framework */,
+				23D5C29129E98FFA0059A05E /* OrcaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23AF0FD929E459DA006DA7C7 /* Orca iOS */ = {
+			isa = PBXGroup;
+			children = (
+				23AF0FDA29E459DA006DA7C7 /* ContentView.swift */,
+				23AF0FF229E459DA006DA7C7 /* Orca_iOSApp.swift */,
+				23AF0FF429E459DD006DA7C7 /* Assets.xcassets */,
+				23AF0FF929E459DD006DA7C7 /* Orca_iOS.entitlements */,
+				23AF0FDC29E459DA006DA7C7 /* Common */,
+				23AF0FED29E459DA006DA7C7 /* Model */,
+				23AF0FF629E459DD006DA7C7 /* Preview Content */,
+			);
+			path = "Orca iOS";
+			sourceTree = "<group>";
+		};
+		23AF0FDC29E459DA006DA7C7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				23D5E76D29EC311600DFB0FE /* Timer */,
+				23AF0FE529E459DA006DA7C7 /* TypeAliases.swift */,
+				23AF0FDD29E459DA006DA7C7 /* UI */,
+				23AF0FE029E459DA006DA7C7 /* Audio */,
+				23AF0FE729E459DA006DA7C7 /* String */,
+				23AF0FEA29E459DA006DA7C7 /* MIDI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		23AF0FDD29E459DA006DA7C7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				23AF0FDE29E459DA006DA7C7 /* ViewControllerRepresentable.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		23AF0FE029E459DA006DA7C7 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				23AF0FE129E459DA006DA7C7 /* Synth.aif */,
+				23AF0FE329E459DA006DA7C7 /* SimplePlayEngine.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		23AF0FE729E459DA006DA7C7 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				23AF0FE829E459DA006DA7C7 /* StringHelpers.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		23AF0FEA29E459DA006DA7C7 /* MIDI */ = {
+			isa = PBXGroup;
+			children = (
+				23AF0FEB29E459DA006DA7C7 /* MIDIManager.swift */,
+			);
+			path = MIDI;
+			sourceTree = "<group>";
+		};
+		23AF0FED29E459DA006DA7C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23AF0FEE29E459DA006DA7C7 /* AudioUnitHostModel.swift */,
+				23AF0FF029E459DA006DA7C7 /* AudioUnitViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23AF0FF629E459DD006DA7C7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				23AF0FF729E459DD006DA7C7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		23AF100129E459DF006DA7C7 /* Orca iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				23AF100229E459DF006DA7C7 /* Orca_iOSTests.swift */,
+			);
+			path = "Orca iOSTests";
+			sourceTree = "<group>";
+		};
+		23AF100B29E459DF006DA7C7 /* Orca iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				23AF100C29E459DF006DA7C7 /* Orca_iOSUITests.swift */,
+				23AF100E29E459DF006DA7C7 /* Orca_iOSUITestsLaunchTests.swift */,
+			);
+			path = "Orca iOSUITests";
+			sourceTree = "<group>";
+		};
+		23AF101829E459DF006DA7C7 /* Orca iOSExtension */ = {
+			isa = PBXGroup;
+			children = (
+				23AF101929E459DF006DA7C7 /* README.md */,
+				23AF104329E459DF006DA7C7 /* Info.plist */,
+				23AF101B29E459DF006DA7C7 /* Common */,
+				23AF102C29E459DF006DA7C7 /* Parameters */,
+				23AF103029E459DF006DA7C7 /* DSP */,
+				23AF103329E459DF006DA7C7 /* UI */,
+			);
+			path = "Orca iOSExtension";
+			sourceTree = "<group>";
+		};
+		23AF101B29E459DF006DA7C7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				23AF101C29E459DF006DA7C7 /* Orca_iOSExtension-Bridging-Header.h */,
+				23AF101D29E459DF006DA7C7 /* Parameters */,
+				23AF102029E459DF006DA7C7 /* Utility */,
+				23AF102529E459DF006DA7C7 /* Audio Unit */,
+				23AF102929E459DF006DA7C7 /* DSP */,
+				23AF103A29E459DF006DA7C7 /* UI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		23AF101D29E459DF006DA7C7 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				23AF101E29E459DF006DA7C7 /* ParameterSpecBase.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		23AF102029E459DF006DA7C7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				23AF102129E459DF006DA7C7 /* CrossPlatform.swift */,
+				23AF102329E459DF006DA7C7 /* String+Utils.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		23AF102529E459DF006DA7C7 /* Audio Unit */ = {
+			isa = PBXGroup;
+			children = (
+				23AF102629E459DF006DA7C7 /* Orca_iOSExtensionAudioUnit.h */,
+				23AF102729E459DF006DA7C7 /* Orca_iOSExtensionAudioUnit.mm */,
+			);
+			path = "Audio Unit";
+			sourceTree = "<group>";
+		};
+		23AF102929E459DF006DA7C7 /* DSP */ = {
+			isa = PBXGroup;
+			children = (
+				23AF102A29E459DF006DA7C7 /* Orca_iOSExtensionAUProcessHelper.hpp */,
+			);
+			path = DSP;
+			sourceTree = "<group>";
+		};
+		23AF102C29E459DF006DA7C7 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				23AF102D29E459DF006DA7C7 /* Orca_iOSExtensionParameterAddresses.h */,
+				23AF102E29E459DF006DA7C7 /* Parameters.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		23AF103029E459DF006DA7C7 /* DSP */ = {
+			isa = PBXGroup;
+			children = (
+				23AF103129E459DF006DA7C7 /* Orca_iOSExtensionDSPKernel.hpp */,
+			);
+			path = DSP;
+			sourceTree = "<group>";
+		};
+		23AF103329E459DF006DA7C7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				23AF103429E459DF006DA7C7 /* Orca_iOSExtensionMainView.swift */,
+				23AF103629E459DF006DA7C7 /* MomentaryButton.swift */,
+				23AF103829E459DF006DA7C7 /* ParameterSlider.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		23AF103A29E459DF006DA7C7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				23AF103F29E459DF006DA7C7 /* ObservableAUParameter.swift */,
+				23AF104129E459DF006DA7C7 /* AudioUnitViewController.swift */,
+				23AF103B29E459DF006DA7C7 /* Base.lproj */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		23AF103B29E459DF006DA7C7 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				23AF103C29E459DF006DA7C7 /* MainInterface.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		23D5C27029E980360059A05E /* OrcaUI */ = {
+			isa = PBXGroup;
+			children = (
+				23D5C27129E980360059A05E /* OrcaUIView.swift */,
+			);
+			path = OrcaUI;
+			sourceTree = "<group>";
+		};
+		23D5C28B29E98FFA0059A05E /* Orca */ = {
+			isa = PBXGroup;
+			children = (
+				239641AD29E4EB9D00AFFF0D /* base.h */,
+				239641C229E4EB9E00AFFF0D /* build */,
+				239641C029E4EB9D00AFFF0D /* cli_main.c */,
+				239641B629E4EB9D00AFFF0D /* etc */,
+				239641B329E4EB9D00AFFF0D /* examples */,
+				239641C129E4EB9D00AFFF0D /* field.c */,
+				239641AC29E4EB9D00AFFF0D /* field.h */,
+				239641BD29E4EB9D00AFFF0D /* gbuffer.c */,
+				239641BE29E4EB9D00AFFF0D /* gbuffer.h */,
+				239641B229E4EB9D00AFFF0D /* LICENSE.md */,
+				239641B429E4EB9D00AFFF0D /* README.md */,
+				239641AE29E4EB9D00AFFF0D /* sim.c */,
+				239641B129E4EB9D00AFFF0D /* sim.h */,
+				239641C329E4EB9E00AFFF0D /* vmio.c */,
+				239641BC29E4EB9D00AFFF0D /* vmio.h */,
+				235B362329E59E610051FCC3 /* Orca.modulemap */,
+				235B362629E59EDA0051FCC3 /* OrcaSimulation.swift */,
+				235B362929E5A4FA0051FCC3 /* OrcaField.swift */,
+				235B362B29E5A5D60051FCC3 /* OrcaMarkBuffer.swift */,
+				235B362D29E5B4D70051FCC3 /* OrcaEvent.swift */,
+				23D5C28C29E98FFA0059A05E /* Orca.h */,
+			);
+			path = Orca;
+			sourceTree = "<group>";
+		};
+		23D5C29729E98FFA0059A05E /* OrcaTests */ = {
+			isa = PBXGroup;
+			children = (
+				23D5C29829E98FFA0059A05E /* OrcaTests.swift */,
+			);
+			path = OrcaTests;
+			sourceTree = "<group>";
+		};
+		23D5E76D29EC311600DFB0FE /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				23D5E76E29EC312600DFB0FE /* Timer.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		23D5C28529E98FFA0059A05E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D5C2B429E992D30059A05E /* vmio.h in Headers */,
+				23D5C2B329E992CE0059A05E /* sim.h in Headers */,
+				23D5C29A29E98FFA0059A05E /* Orca.h in Headers */,
+				23D5C2B229E992C90059A05E /* gbuffer.h in Headers */,
+				23D5C2B129E992C30059A05E /* field.h in Headers */,
+				23D5C2B529E992DD0059A05E /* base.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		23AF0FD629E459DA006DA7C7 /* Orca iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23AF104A29E459DF006DA7C7 /* Build configuration list for PBXNativeTarget "Orca iOS" */;
+			buildPhases = (
+				23AF0FD329E459DA006DA7C7 /* Sources */,
+				23AF0FD429E459DA006DA7C7 /* Frameworks */,
+				23AF0FD529E459DA006DA7C7 /* Resources */,
+				23AF104929E459DF006DA7C7 /* Embed Foundation Extensions */,
+				23D5C2A229E98FFA0059A05E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23AF101729E459DF006DA7C7 /* PBXTargetDependency */,
+				23D5C29C29E98FFA0059A05E /* PBXTargetDependency */,
+			);
+			name = "Orca iOS";
+			productName = "Orca iOS";
+			productReference = 23AF0FD729E459DA006DA7C7 /* Orca iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23AF0FFD29E459DF006DA7C7 /* Orca iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23AF104D29E459DF006DA7C7 /* Build configuration list for PBXNativeTarget "Orca iOSTests" */;
+			buildPhases = (
+				23AF0FFA29E459DF006DA7C7 /* Sources */,
+				23AF0FFB29E459DF006DA7C7 /* Frameworks */,
+				23AF0FFC29E459DF006DA7C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23AF100029E459DF006DA7C7 /* PBXTargetDependency */,
+			);
+			name = "Orca iOSTests";
+			productName = "Orca iOSTests";
+			productReference = 23AF0FFE29E459DF006DA7C7 /* Orca iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		23AF100729E459DF006DA7C7 /* Orca iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23AF105029E459DF006DA7C7 /* Build configuration list for PBXNativeTarget "Orca iOSUITests" */;
+			buildPhases = (
+				23AF100429E459DF006DA7C7 /* Sources */,
+				23AF100529E459DF006DA7C7 /* Frameworks */,
+				23AF100629E459DF006DA7C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23AF100A29E459DF006DA7C7 /* PBXTargetDependency */,
+			);
+			name = "Orca iOSUITests";
+			productName = "Orca iOSUITests";
+			productReference = 23AF100829E459DF006DA7C7 /* Orca iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		23AF101329E459DF006DA7C7 /* Orca iOSExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23AF104629E459DF006DA7C7 /* Build configuration list for PBXNativeTarget "Orca iOSExtension" */;
+			buildPhases = (
+				23AF101029E459DF006DA7C7 /* Sources */,
+				23AF101129E459DF006DA7C7 /* Frameworks */,
+				23AF101229E459DF006DA7C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Orca iOSExtension";
+			productName = "Orca iOSExtension";
+			productReference = 23AF101429E459DF006DA7C7 /* Orca iOSExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		23D5C26E29E980360059A05E /* OrcaUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23D5C27329E980360059A05E /* Build configuration list for PBXNativeTarget "OrcaUI" */;
+			buildPhases = (
+				23D5C26B29E980360059A05E /* Sources */,
+				23D5C26C29E980360059A05E /* Frameworks */,
+				23D5C26D29E980360059A05E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OrcaUI;
+			productName = OrcaUI;
+			productReference = 23D5C26F29E980360059A05E /* libOrcaUI.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		23D5C28929E98FFA0059A05E /* Orca */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23D5C29F29E98FFA0059A05E /* Build configuration list for PBXNativeTarget "Orca" */;
+			buildPhases = (
+				23D5C28529E98FFA0059A05E /* Headers */,
+				23D5C28629E98FFA0059A05E /* Sources */,
+				23D5C28729E98FFA0059A05E /* Frameworks */,
+				23D5C28829E98FFA0059A05E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Orca;
+			productName = Orca;
+			productReference = 23D5C28A29E98FFA0059A05E /* Orca.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		23D5C29029E98FFA0059A05E /* OrcaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23D5C2A329E98FFA0059A05E /* Build configuration list for PBXNativeTarget "OrcaTests" */;
+			buildPhases = (
+				23D5C28D29E98FFA0059A05E /* Sources */,
+				23D5C28E29E98FFA0059A05E /* Frameworks */,
+				23D5C28F29E98FFA0059A05E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23D5C29429E98FFA0059A05E /* PBXTargetDependency */,
+				23D5C29629E98FFA0059A05E /* PBXTargetDependency */,
+			);
+			name = OrcaTests;
+			productName = OrcaTests;
+			productReference = 23D5C29129E98FFA0059A05E /* OrcaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23AF0FCF29E459DA006DA7C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					23AF0FD629E459DA006DA7C7 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					23AF0FFD29E459DF006DA7C7 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 23AF0FD629E459DA006DA7C7;
+					};
+					23AF100729E459DF006DA7C7 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 23AF0FD629E459DA006DA7C7;
+					};
+					23AF101329E459DF006DA7C7 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					23D5C26E29E980360059A05E = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					23D5C28929E98FFA0059A05E = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					23D5C29029E98FFA0059A05E = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 23AF0FD629E459DA006DA7C7;
+					};
+				};
+			};
+			buildConfigurationList = 23AF0FD229E459DA006DA7C7 /* Build configuration list for PBXProject "Orca iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23AF0FCE29E459DA006DA7C7;
+			productRefGroup = 23AF0FD829E459DA006DA7C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23AF0FD629E459DA006DA7C7 /* Orca iOS */,
+				23AF0FFD29E459DF006DA7C7 /* Orca iOSTests */,
+				23AF100729E459DF006DA7C7 /* Orca iOSUITests */,
+				23AF101329E459DF006DA7C7 /* Orca iOSExtension */,
+				23D5C26E29E980360059A05E /* OrcaUI */,
+				23D5C28929E98FFA0059A05E /* Orca */,
+				23D5C29029E98FFA0059A05E /* OrcaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23AF0FD529E459DA006DA7C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23AF0FF529E459DD006DA7C7 /* Assets.xcassets in Resources */,
+				23AF0FF829E459DD006DA7C7 /* Preview Assets.xcassets in Resources */,
+				23AF0FE229E459DA006DA7C7 /* Synth.aif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23AF0FFC29E459DF006DA7C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23AF100629E459DF006DA7C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23AF101229E459DF006DA7C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23AF101A29E459DF006DA7C7 /* README.md in Resources */,
+				23AF103E29E459DF006DA7C7 /* MainInterface.storyboard in Resources */,
+				23AF102B29E459DF006DA7C7 /* Orca_iOSExtensionAUProcessHelper.hpp in Resources */,
+				23AF103229E459DF006DA7C7 /* Orca_iOSExtensionDSPKernel.hpp in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D5C28829E98FFA0059A05E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D5C28F29E98FFA0059A05E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23AF0FD329E459DA006DA7C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23AF0FEF29E459DA006DA7C7 /* AudioUnitHostModel.swift in Sources */,
+				23AF0FF129E459DA006DA7C7 /* AudioUnitViewModel.swift in Sources */,
+				23AF0FE929E459DA006DA7C7 /* StringHelpers.swift in Sources */,
+				23D5E76F29EC312600DFB0FE /* Timer.swift in Sources */,
+				23AF0FE629E459DA006DA7C7 /* TypeAliases.swift in Sources */,
+				23AF0FEC29E459DA006DA7C7 /* MIDIManager.swift in Sources */,
+				23AF0FDB29E459DA006DA7C7 /* ContentView.swift in Sources */,
+				23AF0FDF29E459DA006DA7C7 /* ViewControllerRepresentable.swift in Sources */,
+				23AF0FF329E459DA006DA7C7 /* Orca_iOSApp.swift in Sources */,
+				23AF0FE429E459DA006DA7C7 /* SimplePlayEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23AF0FFA29E459DF006DA7C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23AF100329E459DF006DA7C7 /* Orca_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23AF100429E459DF006DA7C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23AF100F29E459DF006DA7C7 /* Orca_iOSUITestsLaunchTests.swift in Sources */,
+				23AF100D29E459DF006DA7C7 /* Orca_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23AF101029E459DF006DA7C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23AF103529E459DF006DA7C7 /* Orca_iOSExtensionMainView.swift in Sources */,
+				23AF102F29E459DF006DA7C7 /* Parameters.swift in Sources */,
+				23AF103729E459DF006DA7C7 /* MomentaryButton.swift in Sources */,
+				23AF104029E459DF006DA7C7 /* ObservableAUParameter.swift in Sources */,
+				23AF101F29E459DF006DA7C7 /* ParameterSpecBase.swift in Sources */,
+				23AF104229E459DF006DA7C7 /* AudioUnitViewController.swift in Sources */,
+				23AF103929E459DF006DA7C7 /* ParameterSlider.swift in Sources */,
+				23AF102229E459DF006DA7C7 /* CrossPlatform.swift in Sources */,
+				23AF102429E459DF006DA7C7 /* String+Utils.swift in Sources */,
+				23AF102829E459DF006DA7C7 /* Orca_iOSExtensionAudioUnit.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D5C26B29E980360059A05E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D5C27229E980360059A05E /* OrcaUIView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D5C28629E98FFA0059A05E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D5C2A629E990100059A05E /* OrcaField.swift in Sources */,
+				23D5C2AA29E990100059A05E /* OrcaSimulation.swift in Sources */,
+				23D5C2AC29E990100059A05E /* OrcaEvent.swift in Sources */,
+				23D5C2A929E990100059A05E /* OrcaMarkBuffer.swift in Sources */,
+				23D5C2A829E990100059A05E /* gbuffer.c in Sources */,
+				23D5C2AB29E990100059A05E /* vmio.c in Sources */,
+				23D5C2B629E9944A0059A05E /* field.c in Sources */,
+				23D5C2A729E990100059A05E /* sim.c in Sources */,
+				23D5C2AD29E990100059A05E /* cli_main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D5C28D29E98FFA0059A05E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D5C29929E98FFA0059A05E /* OrcaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23AF100029E459DF006DA7C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23AF0FD629E459DA006DA7C7 /* Orca iOS */;
+			targetProxy = 23AF0FFF29E459DF006DA7C7 /* PBXContainerItemProxy */;
+		};
+		23AF100A29E459DF006DA7C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23AF0FD629E459DA006DA7C7 /* Orca iOS */;
+			targetProxy = 23AF100929E459DF006DA7C7 /* PBXContainerItemProxy */;
+		};
+		23AF101729E459DF006DA7C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23AF101329E459DF006DA7C7 /* Orca iOSExtension */;
+			targetProxy = 23AF101629E459DF006DA7C7 /* PBXContainerItemProxy */;
+		};
+		23D5C29429E98FFA0059A05E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23D5C28929E98FFA0059A05E /* Orca */;
+			targetProxy = 23D5C29329E98FFA0059A05E /* PBXContainerItemProxy */;
+		};
+		23D5C29629E98FFA0059A05E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23AF0FD629E459DA006DA7C7 /* Orca iOS */;
+			targetProxy = 23D5C29529E98FFA0059A05E /* PBXContainerItemProxy */;
+		};
+		23D5C29C29E98FFA0059A05E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23D5C28929E98FFA0059A05E /* Orca */;
+			targetProxy = 23D5C29B29E98FFA0059A05E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		23AF103C29E459DF006DA7C7 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23AF103D29E459DF006DA7C7 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23AF104429E459DF006DA7C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Orca iOS/Orca_iOS.entitlements";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				"SWIFT_INCLUDE_PATHS[arch=*]" = "\"./Orca\"";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		23AF104529E459DF006DA7C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Orca iOS/Orca_iOS.entitlements";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INCLUDE_PATHS = "\"./Orca\"";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23AF104729E459DF006DA7C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Orca iOSExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Orca iOSExtension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremydormitzer.Orca-iOS.Orca-iOSExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Orca iOSExtension/Common/Orca_iOSExtension-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23AF104829E459DF006DA7C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Orca iOSExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Orca iOSExtension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				"OTHER_SWIFT_FLAGS[arch=*]" = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremydormitzer.Orca-iOS.Orca-iOSExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Orca iOSExtension/Common/Orca_iOSExtension-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		23AF104B29E459DF006DA7C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Orca iOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremydormitzer.Orca-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23AF104C29E459DF006DA7C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Orca iOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremydormitzer.Orca-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		23AF104E29E459DF006DA7C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremydormitzer.Orca-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orca iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Orca iOS";
+			};
+			name = Debug;
+		};
+		23AF104F29E459DF006DA7C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremydormitzer.Orca-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orca iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Orca iOS";
+			};
+			name = Release;
+		};
+		23AF105129E459DF006DA7C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremydormitzer.Orca-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Orca iOS";
+			};
+			name = Debug;
+		};
+		23AF105229E459DF006DA7C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeremydormitzer.Orca-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Orca iOS";
+			};
+			name = Release;
+		};
+		23D5C27429E980360059A05E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23D5C27529E980360059A05E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		23D5C2A029E98FFA0059A05E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				MODULEMAP_FILE = Orca/Orca.modulemap;
+				MODULEMAP_PRIVATE_FILE = "";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremydormitzer.Orca;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		23D5C2A129E98FFA0059A05E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				MODULEMAP_FILE = Orca/Orca.modulemap;
+				MODULEMAP_PRIVATE_FILE = "";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremydormitzer.Orca;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		23D5C2A429E98FFA0059A05E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremydormitzer.OrcaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orca iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Orca iOS";
+			};
+			name = Debug;
+		};
+		23D5C2A529E98FFA0059A05E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremydormitzer.OrcaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orca iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Orca iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23AF0FD229E459DA006DA7C7 /* Build configuration list for PBXProject "Orca iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23AF104429E459DF006DA7C7 /* Debug */,
+				23AF104529E459DF006DA7C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23AF104629E459DF006DA7C7 /* Build configuration list for PBXNativeTarget "Orca iOSExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23AF104729E459DF006DA7C7 /* Debug */,
+				23AF104829E459DF006DA7C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23AF104A29E459DF006DA7C7 /* Build configuration list for PBXNativeTarget "Orca iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23AF104B29E459DF006DA7C7 /* Debug */,
+				23AF104C29E459DF006DA7C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23AF104D29E459DF006DA7C7 /* Build configuration list for PBXNativeTarget "Orca iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23AF104E29E459DF006DA7C7 /* Debug */,
+				23AF104F29E459DF006DA7C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23AF105029E459DF006DA7C7 /* Build configuration list for PBXNativeTarget "Orca iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23AF105129E459DF006DA7C7 /* Debug */,
+				23AF105229E459DF006DA7C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23D5C27329E980360059A05E /* Build configuration list for PBXNativeTarget "OrcaUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23D5C27429E980360059A05E /* Debug */,
+				23D5C27529E980360059A05E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23D5C29F29E98FFA0059A05E /* Build configuration list for PBXNativeTarget "Orca" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23D5C2A029E98FFA0059A05E /* Debug */,
+				23D5C2A129E98FFA0059A05E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23D5C2A329E98FFA0059A05E /* Build configuration list for PBXNativeTarget "OrcaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23D5C2A429E98FFA0059A05E /* Debug */,
+				23D5C2A529E98FFA0059A05E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23AF0FCF29E459DA006DA7C7 /* Project object */;
+}
