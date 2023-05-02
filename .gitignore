@@ -1,1 +1,4 @@
 DerivedData/
+.DS_Store
+Orca\ iOS.xcodeproj/xcuserdata/*
+Orca\ iOS.xcodeproj/project.xcworkspace/xcuserdata/*
