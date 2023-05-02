@@ -57,8 +57,8 @@ public struct OrcaUIView: View {
                             }
                     }
                 }
-                .padding()
             }
+            .padding()
             .ignoresSafeArea(.keyboard)
             VStack() {
                 Spacer()

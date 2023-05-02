@@ -17,8 +17,8 @@ public class RepeatingTimer {
     init(ticksPerMinute: Double, callback: @escaping () -> Void) {
         self.ticksPerMinute = ticksPerMinute
         self.callback = callback
-        queue = DispatchQueue(label: "BPMTimer", qos: .userInitiated)
-        timer = DispatchSource.makeTimerSource(flags: [.strict])
+        queue = DispatchQueue(label: "BPMTimer", qos: .background)
+        timer = DispatchSource.makeTimerSource(flags: [.strict], queue: queue)
         timer.activate()
         timer.schedule(deadline: .now(), repeating: .milliseconds(scheduleIntervalMillis()))
         timer.setEventHandler {
